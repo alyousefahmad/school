@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>ALhikmeh school</title>
+ <meta charset="utf-8">
+    <link rel="stylesheet" href="../test/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <img class="logoimg" src="../school/image/download.jpg">
+        <ul class="ul1">
+            <li><a href="#Login">Login</a></li>
+            <li><a href="#Register">Register</a></li>
+            <li><a href="#Logout">Logout</a></li>
+            <li><a href="#ContactUs">Contact Us </a></li>
+        </ul>
+        <br>
+        <br>
+ <h1>Enter Student Name and Rate</h1>
+
+ <button onclick="submitRates()">Enter Student Name and Rate</button>
+
+ <script>
+  function submitRates() {
+   var names = [];
+   var rates = [];
+
+
+   for(var i = 0; i < 10; i++) {
+    var name = prompt("Please enter student name:");
+    var rate = prompt("Please enter student rate:");
+
+    names.push(name);
+    rates.push(rate);
+   }
+
+   for(var i = 0; i < names.length; i++) {
+    alert("Student Name: " + names[i] + "\nStudent Rate: " + rates[i]);
+
+    if(rates[i] >= 90) {
+     alert("Excellent");
+    } else if(rates[i] >= 80) {
+     alert("Very Good");
+    } else if(rates[i] >= 70) {
+     alert("Good");
+    } else if(rates[i] >= 60) {
+     alert("Acceptable");
+    } else if(rates[i] >= 50) {
+     alert("Weak");
+    } else {
+     alert("Fail");
+    }
+   }
+  }
+ </script>
+
+</body>
+</html>
